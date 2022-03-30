@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #f4f4f4;
+  --secondary-color: rgb(10, 172, 172);
+  --font-main: "Raleway", sans-serif;
+}
+.clr {
+  clear: both;
+}
+
+body {
+  box-sizing: border-box;
+  background-image: url(./images/backgroundPic.jpg);
+  background-repeat: repeat;
+  background-size: 20%;
+  font-family: var(--font-main);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* backdrop-filter: blur(5px); */
+}
+/* .container {
+  display: flex;
+  border: 1px solid black;
+  max-width: 100%;
+  margin: auto;
+
+  position: relative;
+  padding: 10px;
+} */
+/* .container_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 1000px;
+  flex-direction: column;
+} */
+/* maybe i should put another flex container-colomn that
+ would take main-right + main-left and give it a width */
+.box {
+  margin: auto;
+  background: var(--primary-color);
+  font-family: var(--font-main);
+  letter-spacing: 0.5px;
+  color: rgb(0, 0, 0);
+  border: 2px solid var(--secondary-color);
+  border-style: solid;
+  border-radius: 30px;
+  padding: 10px;
+  max-width: 1000px;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* box-shadow: 5px 5px 20px 10px rgb(141, 132, 132); */
+  /* opacity: 0.5; */
+  width: 500px;
+  border-radius: 50%;
+  align-items: center;
+}
+.navbar {
+  margin: auto;
+}
+.navbar ul {
+  text-align: center;
+  max-width: 100%;
+  margin: auto;
+  background-color: rgb(206, 245, 255);
+  border: 2px solid rgb(10, 172, 172);
+  padding: 10px;
+  position: sticky; /* ??? not working */
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 30px;
+}
+
+.navbar li {
+  list-style-type: none;
+  padding: 0.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.link a:hover {
+  color: whitesmoke;
+}
+
+.link:hover {
+  background: rgb(39, 221, 197);
+}
+
+.logo {
+  flex: 1;
+  font-size: 1.75rem;
+  user-select: none;
+  font-weight: bolder;
+  font-family: "Belleza", sans-serif;
+  text-align: left;
+}
+
+.link {
+  font-style: black;
+}
+
+/* I can remove the .logo addition and it will act with wrap only */
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .navbar-links {
+    width: 100%;
+    text-align: center;
+  }
+  .logo {
+    flex: 0;
+    text-align: center;
+  } */
+}
+
+/* .logo {
+  flex: 1;
+}
+
+.link {
+  text-align: center;
+  padding: 5px 10px;
+  background-color: rgb(30, 142, 233);
+  border: 2px solid rgb(30, 142, 233);
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+} */
+
+.btn:hover {
+  background-color: rgb(55, 195, 219);
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+
+  /*  width: 70%; */
+  margin-bottom: 5px;
+}
+
+.main-right h1 {
+  padding: 20px;
+}
+.main-right p {
+  text-align: left;
+  /*  max-width: 700px; */
+}
+
+.main-bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  /*   width: 70%; */
+}
+
+.main-bottome li {
+  font-size: 18px;
+  text-align: left;
+}
+
+.ul-style {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.li-style {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.enhance {
+  margin: auto;
+  background-color: rgb(161, 219, 209);
+  color: black;
+  font-weight: bold;
+}
+
+#footer {
+  text-align: center;
+  color: rgb(14, 12, 99);
+  font-family: var(--font-main);
+}
+
+.myimage {
+  height: auto;
+  max-width: 400px;
+  border: 1px solid rgb(18, 66, 75);
+  text-align: center;
+}

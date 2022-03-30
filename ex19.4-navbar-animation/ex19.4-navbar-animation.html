@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Animation</title>
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+   
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        background: yellow;
+      }
+
+    
+      .navbar ul {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .navbar ul div {
+       padding: 0.6rem;
+        margin: 0px 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .navbar ul a{
+        text-decoration: none;
+        color: black;
+      }
+
+      .effect {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .effect:before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        top:0;
+        left: 0;
+        border-top: 2px black solid;
+        transition: all 0.3s ;
+        visibility: hidden;
+      }
+
+      .effect:hover:before {
+        border-top: 2px black solid;
+        width: 100%;
+        visibility: visible;
+        
+      }
+
+      .effect:after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        bottom:0;
+        right: 0;                         /*note to myself: right bottom, not left! */
+        border-bottom: 2px black solid;
+        transition: all 0.3s ;
+        visibility: hidden;
+      }
+
+      .effect:hover:after {
+        border-bottom: 2px black solid;       
+        width: 100%; 
+        visibility: visible;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <ul>
+          <div class="effect"><a href="#">Home</a></div>
+          <div class="effect"><a href="#">About</a></div>
+          <div class="effect"><a href="#">Services</a></div>
+          <div class="effect"><a href="#">Portfolio</a></div>
+          <div class="effect"><a href="#">Contact</a></div>
+        </ul>
+       
+    </nav>
+
+  </body>
+</html>
